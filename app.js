@@ -9,6 +9,9 @@ app.use(express.static(assetsPath));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Middleware to parse URL-encoded data from forms
+app.use(express.urlencoded({ extended: false }));
+
 // Navigation links and user data
 const links = [
   { href: "/", text: "Home" },
@@ -39,6 +42,21 @@ app.get("/", (req, res) => {
 
 app.get("/new", (req, res) => {
   res.render("form", { title: "Add a New Message", links: links });
+});
+
+// Route to handle form submissions
+app.post("/new", (req, res) => {
+  const { user, text } = req.body; // Get the form data
+
+  // Add the new message to the messages array
+  messages.push({
+    text,
+    user,
+    added: new Date(),
+  });
+
+  // Redirect back to the homepage to see the updated messages
+  res.redirect("/");
 });
 
 const PORT = 3000;
