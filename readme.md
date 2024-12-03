@@ -2,6 +2,8 @@
 
 A simple message board application built with Node.js and Express, using EJS as the templating engine. This application allows users to view, add, and read messages. The project includes basic CRUD functionality with a user-friendly interface and is styled with custom CSS.
 
+-- live preview [click here](https://mini-message-board-0k32.onrender.com/)
+
 ## Features
 
 - View a list of messages on the homepage.
