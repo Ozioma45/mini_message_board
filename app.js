@@ -33,6 +33,10 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Mini Messageboard", messages: messages });
 });
 
+app.get("/new", (req, res) => {
+  res.render("form", { title: "Add a New Message" });
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`App running on http://localhost:${PORT}`);
