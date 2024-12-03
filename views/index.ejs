@@ -7,6 +7,8 @@
   </head>
   <body>
     <h1><%= title %></h1>
+    <%- include('navbar', {links: links}) %>
+
     <ul>
       <% messages.forEach((message) => { %>
       <li>

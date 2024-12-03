@@ -30,11 +30,15 @@ const messages = [
 
 // Route to render the index page
 app.get("/", (req, res) => {
-  res.render("index", { title: "Mini Messageboard", messages: messages });
+  res.render("index", {
+    title: "Mini Messageboard",
+    messages: messages,
+    links: links,
+  });
 });
 
 app.get("/new", (req, res) => {
-  res.render("form", { title: "Add a New Message" });
+  res.render("form", { title: "Add a New Message", links: links });
 });
 
 const PORT = 3000;
