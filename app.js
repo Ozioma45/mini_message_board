@@ -59,6 +59,18 @@ app.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/message/:id", (req, res) => {
+  const messageId = parseInt(req.params.id, 10);
+
+  // Check if the message exists
+  if (messageId >= 0 && messageId < messages.length) {
+    const message = messages[messageId];
+    res.render("message", { message });
+  } else {
+    res.status(404).send("Message not found");
+  }
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`App running on http://localhost:${PORT}`);
