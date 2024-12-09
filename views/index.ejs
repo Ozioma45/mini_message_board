@@ -13,13 +13,13 @@
     <ul>
       <% messages.forEach((message, index) => { %>
       <li>
-        <strong><%= message.user %>:</strong>
+        <strong><%= message.user_name %>:</strong>
         <%= message.text %>
         <br />
         <small><%= message.added.toLocaleString() %></small>
 
         <!-- Link to the message details -->
-        <a href="/message/<%= index %>">Open</a>
+        <a href="/message/<%= message.id %>">Open</a>
       </li>
       <% }); %>
     </ul>
