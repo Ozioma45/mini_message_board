@@ -1,7 +1,3 @@
-Here’s your updated README file with improved clarity and structure, ensuring it accurately reflects the features and functionality of your Mini Message Board project:
-
----
-
 # Mini Message Board
 
 A simple message board application built with **Node.js** and **Express**, using **EJS** as the templating engine. This application allows users to view, add, and read messages. It includes basic CRUD functionality, a user-friendly interface, and custom styling.
