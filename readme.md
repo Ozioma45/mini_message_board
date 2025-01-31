@@ -2,7 +2,7 @@
 
 A simple message board application built with **Node.js** and **Express**, using **EJS** as the templating engine. This application allows users to view, add, and read messages. It includes basic CRUD functionality, a user-friendly interface, and custom styling.
 
-👉 **Live Preview:** [Mini Message Board](https://mini-message-board-24gd.onrender.com/)
+👉 **Live Preview:** [Mini Message Board](https://mini-message-board-nvrp.onrender.com/)
 
 ---
 
